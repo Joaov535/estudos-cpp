@@ -7,7 +7,7 @@ int main()
 {
     list<int> items;
     int tam;
-    list<int>::iterator iterator;
+    list<int>::iterator iterator, iterator2;
 
     tam = 10;
     for (int i = 0; i < tam; i++)
@@ -82,6 +82,12 @@ int main()
 
     cout << "lista organizada: ";
     items.sort();
+
+    // Removendo item da lista
+
+    iterator2 = items.begin();
+    advance(iterator2, 2); // Remove 3° item da lista
+    items.erase(iterator2);
 
     while (!items.empty())
     {
